@@ -298,8 +298,8 @@ public class PlayerInteraction : MonoBehaviour
                 ITSpeech = false;
                 if (endgame == true)
                 {
-                    Debug.Log("GAME QUIT");
-                    Application.Quit();
+                    System.Diagnostics.Process.Start(Application.dataPath.Replace("_Data", ".exe")); //new program
+                    Application.Quit(); //kill current process
                 }
             }
         }
